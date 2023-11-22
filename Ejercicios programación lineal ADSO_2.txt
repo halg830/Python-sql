@@ -1,0 +1,57 @@
+#Realizar operaciones con los vectores y matrices propuestos
+
+#Suma de matrices
+
+
+#Resta de matrices
+
+
+#Suma de matriz y escalar
+
+
+#Suma de vector y escalar
+
+
+#Transpuesta de una matriz
+
+
+#Multiplicación de un escalar y un vector
+
+
+#Multiplicación de un escalar y una matriz
+
+
+#Multiplicación de vectores
+
+
+#Multiplicación de matrices
+
+
+##Operaciones con matrices
+
+#add() esto es suma
+
+
+#subtract() esto es resta
+
+
+#multiply() esto es multiplicar elemento a elemento
+
+
+#dot() multiplicar por un valor (numero)
+
+
+#divide() dividir dos matrices elemento a elemento
+
+
+#mod() Dividir dos matrices y obtener el resto de la división, elemento a elemento.
+
+
+#divmod() Dividir dos arrays y obtener el cociente y el resto de la división, elemento a elemento.
+
+
+#negative() Cambiar el signo a los valores de un array.
+
+
+#sqrt() Calcular la raíz cuadrada, elemento a elemento.
+

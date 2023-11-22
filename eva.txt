@@ -1,0 +1,147 @@
+#Combinando este tipo de creaciones con las operaciones aritméticas,
+#podemos hacer varias inicializaciones muy rápidamente
+# Por ejemplo, para crear un vector cuyos valores iniciales son todos 2.
+
+print("- Vector con todos los elementos con valor 2:")
+vector_dos=np.zeros(5)+2
+print(vector_dos)
+
+print("- Vector con todos los elementos con valor 2 (otra forma):")
+vector_dos_otro=np.ones((5))*2
+print(vector_dos_otro)
+
+####
+
+print("- Matriz creada con una lista de listas:")
+lista_de_listas=[ [1  ,-4], 
+                  [12 , 3], 
+                  [7.2, 5]]
+matriz = np.array(lista_de_listas)
+print(matriz)
+
+
+print("- Matriz creada con np.zeros:")
+dimensiones=(2,3)
+matriz_ceros = np.zeros(dimensiones)
+print(matriz_ceros)
+
+
+print("- Matriz creada con np.ones:")
+dimensiones=(3,2)
+matriz_unos = np.ones(dimensiones)
+print(matriz_unos)
+
+#también podemos usar np.copy para copiar una matriz 
+print("- Copia de la matriz creada con np.ones:")
+matriz_unos_copia=np.copy(matriz_unos)
+print(matriz_unos_copia)
+
+
+#####
+
+# Ejercicio
+# Crear una matriz de 4x9, que esté inicializada con el valor 0.5
+
+matriz=0 #IMPLEMENTAR
+
+print(matriz)
+
+#########
+
+lista_de_listas=[ [1  ,-4], 
+                  [12 , 3], 
+                  [7.2, 5]]
+a = np.array(lista_de_listas)
+
+print("Elementos individuales")
+print(a[0,1])
+print(a[2,1])
+
+print("Vector de elementos de la fila 1")
+print(a[1,:])
+
+print("Vector de elementos de la columna 0")
+print(a[:,0])
+
+print("Submatriz de 2x2 con las primeras dos filas")
+print(a[0:2,:])
+
+print("Submatriz de 2x2 con las ultimas dos filas")
+print(a[1:3,:])
+
+############
+
+lista_de_listas=[ [1,-4], 
+                  [12,3], 
+                  [7, 5.0]]
+a = np.array(lista_de_listas)
+
+print("- Matriz original:")
+print(a)
+
+print("- Le asignamos el valor 4 a los elementos de la columna 0:")
+a[:,0]=4
+print(a)
+
+
+print("- Dividimos por 3 la columna 1:")
+a[:,1]=a[:,1]/3.0
+print(a)
+
+print("- Multiplicamos por 5 la fila 1:")
+a[1,:]=a[1,:]*5
+print(a)
+
+print("- Le sumamos 1 a toda la matriz:")
+a=a+1
+print(a)
+
+######################
+
+#Ejercicios
+
+lista_de_listas=[ [-44,12], 
+                  [12.0,51], 
+                  [1300, -5.0]]
+a = np.array(lista_de_listas)
+
+print("Matriz original")
+print(a)
+
+
+# Restarle 5 a la fila 2 de la matriz
+#IMPLEMENTAR
+print(a)
+
+# Multiplicar por 2 toda la matriz
+#IMPLEMENTAR
+print(a)
+
+# Dividir por -5 las dos primeras filas de la matriz
+#IMPLEMENTAR
+print(a)
+
+
+#Imprimir la ultima fila de la matriz
+ultima_fila=0 # IMPLEMENTAR
+print(ultima_fila)
+
+#############
+
+# Más ejercicios
+
+# Calcular la suma de los elementos de a utilizando dos fors anidados
+suma = 0
+#IMPLEMENTAR
+print(suma)
+
+# Calcular la suma de los elementos de a utilizando np.sum
+#IMPLEMENTAR
+
+# Calcular el promedio de los elementos de las primeras dos filas de a utilizando dos fors anidados
+promedio=0
+#IMPLEMENTAR
+print(promedio)
+
+# Calcular el promedio de los elementos de las primeras dos filas de utilizando slices y np.mean
+#IMPLEMENTAR

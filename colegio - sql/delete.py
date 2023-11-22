@@ -1,0 +1,11 @@
+import sqlite3
+cnx=sqlite3.connect("colegio.db")
+cursor=cnx.cursor()
+cursor.execute("DELETE FROM decanos WHERE nombres = 'Raul'")
+cursor.execute("DELETE FROM estudiantes WHERE direccion = 'Narnia'")
+cursor.execute("DELETE FROM asignaturas WHERE nombres = 'Matematicas'")
+cursor.execute("DELETE FROM falcultades WHERE nombres = 'Filosofia'")
+cursor.execute("DELETE FROM docentes WHERE nombres = 'Raul'")
+cursor.execute("DELETE FROM cursos WHERE asignaturas_codigo = 'A002'")
+cursor.execute("DELETE FROM inscripciones WHERE asignaturas_codigo = 'A002'")
+cnx.commit()

@@ -1,0 +1,228 @@
+import numpy as np
+
+#Ejercicios
+
+lista_de_listas=[ [-44,12], 
+                  [12.0,51], 
+                  [1300, -5.0]]
+a = np.array(lista_de_listas)
+
+print("Matriz original")
+print(a)
+
+
+# Restarle 5 a la fila 2 de la matriz
+#IMPLEMENTAR
+print("Restar 5 a fila 1")
+a[1,:]=a[1,:]-5
+print(a)
+
+# Multiplicar por 2 toda la matriz
+#IMPLEMENTAR
+print("Multiplicar por 2 todo")
+a=a*2
+print(a)
+
+# Dividir por -5 las dos primeras filas de la matriz
+#IMPLEMENTAR
+print("Dividir por -5")
+a[0:2,:]=a[0:2,:]/5
+print(a)
+
+
+#Imprimir la ultima fila de la matriz
+print("Ultima fila")
+ultima_fila=a[2] # IMPLEMENTAR
+print(ultima_fila)
+
+------------------------------------------------------------
+
+import numpy as np
+
+lista_de_listas=[ [-44,12], 
+                  [12.0,51], 
+                  [1300, -5.0]]
+a = np.array(lista_de_listas)
+
+print("Matriz original")
+print(a)
+
+# Más ejercicios
+
+# Calcular la suma de los elementos de a utilizando dos fors anidados
+print("for anidados")
+suma = 0
+for sub in a:
+    for elemento in sub:
+        suma+=elemento
+#IMPLEMENTAR
+print(suma)
+
+# Calcular la suma de los elementos de a utilizando np.sum
+#IMPLEMENTAR
+print("sumar np")
+sumar = np.sum(a)
+
+# Calcular el promedio de los elementos de las primeras dos filas de a utilizando dos fors anidados
+print("promedio for anidados")
+promedio=0
+#IMPLEMENTAR
+rows = 2
+columns = len(a[0])
+
+for i in range(rows):
+    for j in range(columns):
+        promedio+=a[i][j]
+
+promedio/=rows*columns
+print(promedio)
+
+# Calcular el promedio de los elementos de las primeras dos filas de utilizando slices y np.mean
+#IMPLEMENTAR
+print("promedio con np")
+npPromedio = np.mean(a[:2])
+print(npPromedio)
+
+------------------------------------------------------------
+import numpy as np
+
+#vectores y matrices propuestos 
+vector1 = np.array([5, 13, 1, -9])
+vector2 = np.array([-2, -6, 4, -8])
+matriz1 = np.array(([[1, -2,5], [2, 5,-8], [2, 1,0]]))
+matriz2 = np.array(([[-1, 7,3], [-8, 2,-10], [-2, 2,5]]))
+
+#Realizar operaciones con los vectores y matrices propuestos
+
+#Suma de matrices
+print("Suma matriz: ", matriz1+matriz2)
+
+#Resta de matrices
+print("Resta matrices: ", matriz1-matriz2)
+
+#Suma de matriz y escalar
+escalar = 5
+print("Suma matriz y escalar: ", matriz1+escalar)
+
+#Suma de vector y escalar
+print("Suma de vector y escalar: ", vector1+escalar)
+
+#Transpuesta de una matriz
+print("Transpuesta matriz: ", matriz1.T)
+
+#Multiplicación de un escalar y un vector
+print("Multi escalar y vector: ", escalar*vector1)
+
+#Multiplicación de un escalar y una matriz
+print("Multi escalar y matriz: ", escalar*matriz1)
+
+#Multiplicación de vectores
+print("Multi vectores: ", vector1*vector2)
+
+#Multiplicación de matrices
+print("Multi matrices: ", matriz1*matriz2)
+
+##Operaciones con matrices
+
+#add() esto es suma
+add = np.add(matriz1, matriz2)
+print("add: ", add)
+
+#subtract() esto es resta
+subtract = np.subtract(matriz1, matriz2)
+print("Subtract: ", subtract)
+
+#multiply() esto es multiplicar elemento a elemento
+multiply = np.multiply(matriz1, matriz2)
+print("multiply: ", multiply)
+
+#dot() multiplicar por un valor (numero)
+dot = np.dot(matriz1, matriz2)
+print("dot: ", dot)
+
+#divide() dividir dos matrices elemento a elemento
+print("divide: ", np.divide(matriz1, matriz2))
+
+#mod() Dividir dos matrices y obtener el resto de la división, elemento a elemento.
+print("mod: ", np.mod(matriz1, matriz2))
+
+#divmod() Dividir dos arrays y obtener el cociente y el resto de la división, elemento a elemento.
+print("divmod: ", np.divmod(matriz1, matriz2))
+
+#negative() Cambiar el signo a los valores de un array.
+print("negative: ", np.negative(matriz1, matriz2))
+
+#sqrt() Calcular la raíz cuadrada, elemento a elemento.
+print("sqrt: ", np.sqrt(matriz1))
+
+---------------------------------------------------------------------
+import numpy as np
+
+vector1=np.array([11,10,12])
+vector2=np.array([-2,5,15])
+matriz1 = np.array(([[3, -2,4], [8, 5,-6], [3, 0,9]]))
+matriz2 = np.array(([[-1,0,8], [-3,5,-9], [2,1,7]]))
+
+#Realizar operaciones con los vectores y matrices propuestos
+
+#Suma de matrices
+print("Suma matriz: ", matriz1+matriz2)
+
+#Resta de matrices
+print("Resta matrices: ", matriz1-matriz2)
+
+#Suma de matriz y escalar
+escalar = 5
+print("Suma matriz y escalar: ", matriz1+escalar)
+
+#Suma de vector y escalar
+print("Suma de vector y escalar: ", vector1+escalar)
+
+#Transpuesta de una matriz
+print("Transpuesta matriz: ", matriz1.T)
+
+#Multiplicación de un escalar y un vector
+print("Multi escalar y vector: ", escalar*vector1)
+
+#Multiplicación de un escalar y una matriz
+print("Multi escalar y matriz: ", escalar*matriz1)
+
+#Multiplicación de vectores
+print("Multi vectores: ", vector1*vector2)
+
+#Multiplicación de matrices
+print("Multi matrices: ", matriz1*matriz2)
+
+##Operaciones con matrices
+
+#add() esto es suma
+add = np.add(matriz1, matriz2)
+print("add: ", add)
+
+#subtract() esto es resta
+subtract = np.subtract(matriz1, matriz2)
+print("Subtract: ", subtract)
+
+#multiply() esto es multiplicar elemento a elemento
+multiply = np.multiply(matriz1, matriz2)
+print("multiply: ", multiply)
+
+#dot() multiplicar por un valor (numero)
+dot = np.dot(matriz1, matriz2)
+print("dot: ", dot) 
+
+#divide() dividir dos matrices elemento a elemento
+print("divide: ", np.divide(matriz1, matriz2))
+
+#mod() Dividir dos matrices y obtener el resto de la división, elemento a elemento.
+print("mod: ", np.mod(matriz1, matriz2))
+
+#divmod() Dividir dos arrays y obtener el cociente y el resto de la división, elemento a elemento.
+print("divmod: ", np.divmod(matriz1, matriz2))
+
+#negative() Cambiar el signo a los valores de un array.
+print("negative: ", np.negative(matriz1, matriz2))
+
+#sqrt() Calcular la raíz cuadrada, elemento a elemento.
+print("sqrt: ", np.sqrt(matriz1))
+  

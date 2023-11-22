@@ -1,0 +1,12 @@
+import sqlite3
+cnx = sqlite3.connect("colegio.db")
+cursor = cnx.cursor()
+cursor.execute("UPDATE decanos SET nombres = 'Raul' WHERE nombres = 'John'")
+cursor.execute("UPDATE estudiantes SET direccion = 'Narnia' WHERE nombres = 'Michael'")
+cursor.execute("UPDATE asignaturas SET nombres = 'Matematicas' WHERE nombres = 'Mathematics'")
+cursor.execute("UPDATE falcultades SET nombres = 'Filosofia' WHERE ubicacion = 'Building B'")
+cursor.execute("UPDATE docentes SET nombres = 'Raul' WHERE nombres = 'John'")
+cursor.execute("UPDATE cursos SET asignaturas_codigo = 'A002' WHERE docentes_cedula = '111111111'")
+cursor.execute("UPDATE inscripciones SET asignaturas_codigo = 'A002' WHERE periodo = '2023-01'")
+cnx.commit()
+cnx.close()

@@ -1,0 +1,149 @@
+EJERCICIOS PYTHON
+
+1
+
+cantGalones = float(input("Ingrese la cantidad de galones: "))
+precioLitro = float(input("Ingrese el precio por litro: "))
+
+galon = 3.785411784
+
+precioGalon = galon*cantGalones/precioLitro
+
+print("El precio en galones es: ", precioGalon)
+
+------------------------------------------------------------
+
+2
+
+x = int(input("Ingrese el valor de x: "))
+
+y= 3*x**2+7*x-15
+
+print("Las raíces de la ecuación son: ", y)
+
+------------------------------------------------------------
+
+3
+
+nombre = input("Digite el nombre del rinoceronte: ")
+edad = int(input("Digite la edad del rinoceronte: "))
+peso = float(input("Digite el peso en libras: "))
+longitud = float(input("Digite la longitud en pies: "))
+
+libra = 0.453592
+pie = 0.3048
+
+kg = peso*libra
+m = longitud*pie
+
+print("El rinoceronte ", nombre, " con la edad ", edad, "pesa ", kg, "kg y tiene una longitud de ", m)
+
+------------------------------------------------------------
+
+4
+
+nombre = input("Digite el nombre del empleado: ")
+horas = int(input("Digite las horas trabajadas: "))
+cuota = float(input("Digite la cuota por hora trabajada: "))
+
+incentivo = 0.05
+
+sueldo=horas*cuota
+
+if horas>40:
+    sueldo+=sueldo*incentivo
+
+print("El sueldo del empleado", nombre, "es: ", sueldo)
+
+------------------------------------------------------------
+
+5
+
+largo = float(input("Digite el largo en metros: "))
+ancho = float(input("Digite el ancho en metros: "))
+precio = float(input("Digite el precio por metro cuadrado: "))
+
+descuento = 0.1
+
+mCuadrado = largo*ancho
+total=mCuadrado*precio
+
+if mCuadrado>400:
+    total-=total*descuento
+
+print("El precio del terreno es: ", total)
+
+------------------------------------------------------------
+
+6
+
+cant = int(input("Digite la cantidad de trajes: "))
+precioUnidad = float(input("Digite el precio por unidad: "))
+modelo = input("Digite el modelo: ")
+
+descuento = 0.17
+
+total=cant*precioUnidad
+
+if cant >=3:
+    total-=total*descuento
+
+print("El total es: ", total)
+
+------------------------------------------------------------
+
+7
+
+cantBrochas = int(input("Digite la cantidad de brochas: "))
+precioBrochas = float(input("Digite el precio unitario de la brocha: "))
+cantRodillos = int(input("Digite la cantidad de rodillos: "))
+precioRodillos = float(input("Digite el precio unitario del rodillo: "))
+cantSellador = int(input("Digite la cantidad de selladores: "))
+precioSellador = float(input("Digite el precio unitario del sellador: "))
+print("Eliga el método de pago: \n a-Crédito \n b-Contado")
+tipoPago = input("Digite una opción: ")
+
+descuentoBrochas = 0.2
+descuentoRodillos = 0.15
+descuentoContado = 0.07
+
+totalBrochas = cantBrochas*precioBrochas
+totalRodillos = cantRodillos*precioRodillos
+totalSellador = cantSellador*precioSellador
+
+totalBrochas -=totalBrochas*descuentoBrochas
+totalRodillos -=totalRodillos*descuentoRodillos
+
+total = totalBrochas+totalRodillos+totalSellador
+
+if tipoPago == "a": 
+    print("El total de la orden es: ",total)
+elif tipoPago == "b":
+    total-=total*descuentoContado
+    print("El total de la orden es: ", total)
+elif tipoPago != "a" or tipoPago != "b":
+    print("Tipo de pago incorrecto")
+
+------------------------------------------------------------
+
+8
+
+articulo = input("Digite el artículo: ")
+costo = float(input("Digite el costo básico: "))
+
+if costo<=30:
+    impuesto = 0
+elif costo<=60:
+    impuesto = 0.3
+elif costo <=400:
+    impuesto = 0.4
+elif costo>400:
+    impuesto = 0.5
+
+if costo > 30:  
+    costo+=costo*impuesto
+
+print("El costo por el artículo ", articulo, " es: ", costo)
+
+------------------------------------------------------------
+
